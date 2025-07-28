@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Management</title>
+</head>
+<body>
+    <header>
+        <h1>Library Management</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="{{url_for('index')}}">
+                        Home
+                    </a>
+                    <a href="{{url_for('add_book')}}">
+                        Add Book
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+        <main>
+
+            {% block content %}
+            {% endblock %}
+        </main>
+
+<footer>
+    <h2>THis is footer</h2>
+</footer>
+</body>
+</html>

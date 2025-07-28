@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Detail</title>
+    <link rel="stylesheet" href="{{url_for('static', filename= "style.css")}}">
+</head>
+<body>
+    {% for b in book  %}
+        <h2>{{b.title}}</h2>
+    <p>{{b.year}}</p>
+    {% endfor%}
+    <a href="/home">Back to home</a>
+</body>
+</html>
