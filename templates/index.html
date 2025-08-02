@@ -2,16 +2,15 @@
 
 {% block content %}
     <h1>My Books</h1>
-    {% for book in books %}
-      <div>
-
-          <h2> <a href={{url_for('book_details', book_id = book.id)}}>{{book['title']}}</a></h2>
-          <h3>{{book['author']}}</h3>
-          <form action={{url_for('delete_book', book_id=book.id)}} method = 'post' >
-          <button>Delete</button>
-              </form>
-      </div>
-    {% endfor %}
-    <a href="/add-book">Add book</a>
-
+    <div class="book-list">
+        {% for book in books %}
+        <div class="book-card">
+            <h2><a href="{{url_for('book_details', book_id=book.id)}}">{{book['title']}}</a></h2>
+            <h3>{{book['author']}}</h3>
+            <form action="{{url_for('delete_book', book_id=book.id)}}" method="post">
+                <button class="delete-btn">Delete</button>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
 {% endblock %}
